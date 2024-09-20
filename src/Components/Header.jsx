@@ -15,6 +15,7 @@ function Header() {
         onClick={() => navigate('/')}
         style={{ cursor: 'pointer' }}
       />
+      
     </header>
     );
   }

@@ -1,21 +1,30 @@
-import React from "react";
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import ProductCard from '../Components/ProductCard'
 
-const DetalleTienda = ({ tiendas }) => {
-    const { id } = useParams();
-    const navigate = useNavigate();
-    const tienda = tiendas.find(p => p.id === parseInt(id));
+
+const DetalleTienda = ({ productosLibreria, tiendas }) => {
+
 
     return (
-        <div className="producto-detalle">
-            <div className="producto-imagenes">
-                {tienda.imagenes.map((imagen) => (
-                    <img src={imagen} alt="Producto" className="detalle-imagen" />
-                ))}
+        <div className="container">
+            <div>
+                 <div>
+                    <h1>HOLA</h1>
+                    <p>{tiendas[0].nombre}</p>
+                </div>  
+
             </div>
+
+            <div className="productos-grid">
+                {productosLibreria.map(producto => (
+                    <ProductCard
+                        key={producto.id}
+                        producto={producto} 
+                    />
+                ))}
+            </div>  
         </div>
     );
-
-}
+};
 
 export default DetalleTienda;

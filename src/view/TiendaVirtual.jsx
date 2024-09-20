@@ -31,7 +31,6 @@ const TiendaVirtual = ({ tiendas }) => {
                         tienda={tienda}
                         
                     />
-
                 )) : (
                     <p> No se encontraron registros </p>
                 )}

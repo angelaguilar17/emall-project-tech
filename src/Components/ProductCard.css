@@ -1,0 +1,19 @@
+.product-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    width: 50%;
+}
+
+.product-card{
+    background-color: #f5e4ff; 
+    padding: 1rem; 
+    border-radius: 10px;
+    text-align: center; 
+    width: 300px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto; 
+}
+

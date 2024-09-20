@@ -108,9 +108,9 @@ h1 {
 }
 
 .buscador-input{
-  background-color: #EDC9FF;
+  background-color: #f4dfff;
   border-radius: 8px;
-  border-color: #EDC9FF;
+  border-color: #f4dfff;
   height: 30px;
   margin: 20px 0px;
   flex-grow: 1; 
