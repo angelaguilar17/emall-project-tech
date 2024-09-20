@@ -13,7 +13,7 @@
     border-radius: 10px;
     text-align: center; 
     width: 300px; 
-    height: 370px;
+    height: 350px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin: 0 auto; 
 }
@@ -22,3 +22,11 @@
     width: 120px;
 }
 
+.button-search {
+    background-color: #70017a;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+  }

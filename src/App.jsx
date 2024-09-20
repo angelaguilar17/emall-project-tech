@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, BrowserRouter } from 'react-rou
 import Header from './Components/Header';
 import TiendaVirtual from './view/TiendaVirtual';
 import DetalleTienda from './view/DetalleTienda';
+import DetalleProducto from './view/DetalleProducto';
 
 
 const App = () => {
@@ -42,14 +43,14 @@ const App = () => {
       tiendaNombre: 'LibreriaEntreHojas',
       nombre: 'Un Beso en Paris - Stephanie Perkins', 
       precio: '45.000', 
-      descripcion: 'Libro de ficción adulto joven, novela, novela rosa', 
+      descripcion: 'Libro juvenil', 
       imagen: '/imagenes/libro2.jpg',
     },
     { id: 2, 
       tiendaNombre: 'LibreriaEntreHojas',
       nombre: 'Don Quijote de la Mancha - Miguel de Cervantes', 
       precio: '60.000', 
-      descripcion: 'Libro de parodia, sátira, farsa, novela psicológica', 
+      descripcion: 'Libro de parodia, sátira', 
       imagen: '/imagenes/libro3.jpg',
     },
     { id: 3, 
@@ -169,6 +170,11 @@ const App = () => {
           <DetalleTienda 
             productosLibreria={productosLibreria}
             tiendas={tiendas}/>
+        } />
+        <Route path='/producto/:id' element={
+          <DetalleProducto
+            productosLibreria={productosLibreria}
+            />
         } />
         
       </Routes>

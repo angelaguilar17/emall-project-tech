@@ -1,8 +1,10 @@
 import React from 'react';
 import './ProductCard.css';
-import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ producto }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="product-container">
       <div className="product-card">
@@ -12,10 +14,14 @@ const ProductCard = ({ producto }) => {
           className="product-imagen"
         />
         <h2 className="store-name">{producto.nombre}</h2>
-        <p className="store-info">${producto.precio}</p>
         <p className="store-info">{producto.descripcion}</p>
+        <button
+          onClick={() => navigate(`/producto/${producto.id}`)}
+          className="button-search"
+        >
+          Ver producto
+        </button>
       </div>
-
     </div>
     
    

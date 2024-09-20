@@ -146,7 +146,47 @@ h1 {
   margin-right: 15px; 
 }
 
-/* Tarjeta de producto */
+/* Espacio de DetalleProducto */
+
+.product-detail-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-image {
+  flex: 1;
+  margin-right: 100px;
+}
+
+.product-image img {
+  width: 200px;
+  height: auto;
+  max-width: 400px;
+  border-radius: 8px;
+  margin: 50px;
+}
+
+.product-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 50px;
+}
+
+.product-info h2 {
+  margin: 0;
+  font-size: 2em;
+  color: #70017a;
+}
+
+.product-info p {
+  margin: 10px 0;
+}
 
 .boton-agregar {
   margin-top: 0.5rem;
