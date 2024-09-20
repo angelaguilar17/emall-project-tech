@@ -8,12 +8,17 @@
 }
 
 .product-card{
-    background-color: #f5e4ff; 
+    background-color: #f4dfff; 
     padding: 1rem; 
     border-radius: 10px;
     text-align: center; 
     width: 300px; 
+    height: 370px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     margin: 0 auto; 
+}
+
+.product-imagen{
+    width: 120px;
 }
 

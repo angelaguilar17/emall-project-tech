@@ -13,7 +13,7 @@ const StoreCard = ({ tienda }) => {
           className="store-imagen"
         />
         <h2 className="store-name">{tienda.nombre}</h2>
-        <p className="store-info">{tienda.info}</p>
+        <p className="store-info">{tienda.descripcion}</p>
 
         <button
           onClick={() => navigate(`/tienda/${tienda.id}`)}
