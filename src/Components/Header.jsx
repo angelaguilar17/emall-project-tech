@@ -1,9 +1,15 @@
+/**
+ * Este componente contiene el encabezado de la página principal
+ */
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import './Header.css';
 
 
-
+/**
+ * Inserción de elementos en el encabezado de la página, tales como el logo
+ */
 function Header() {
   const navigate = useNavigate();
   return (

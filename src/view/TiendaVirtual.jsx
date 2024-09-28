@@ -1,3 +1,8 @@
+/**Este componente contiene 
+ * la estructura de la página principal 
+ * en la cual aparecen las tiendas y los enlaces
+ * para acceder a las páginas de cada tienda */
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import StoreCard from '../Components/StoreCard'

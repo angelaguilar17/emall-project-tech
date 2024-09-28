@@ -1,3 +1,7 @@
+/**
+ * Este componente contiene las tarjetas de información de cada una de las tiendas
+ */
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './StoreCard.css';
@@ -14,10 +18,12 @@ const StoreCard = ({ tienda }) => {
         />
         <h2 className="store-name">{tienda.nombre}</h2>
         <p className="store-info">{tienda.descripcion}</p>
+        <p className="store-Wp">{tienda.Wp}</p>
+        <p className="store-Wp">{tienda.PagWeb}</p>
 
         <button
           onClick={() => navigate(`/tienda/${tienda.id}`)}
-          className="button-search"
+          className="button-search" /**Por medio de este enlace se accede a la página de la tienda con sus respectivos productos */
         >
           Visítanos
         </button>
