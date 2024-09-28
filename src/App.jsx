@@ -6,30 +6,37 @@ import DetalleTienda from './view/DetalleTienda';
 import DetalleProducto from './view/DetalleProducto';
 
 
+
 const App = () => {
-  const [carrito, setCarrito] = useState([]);
+  /**Contenido de cada una de las tiendas */
   const tiendas = [
     {
       id: 0, 
       nombre: 'Libreria Entre Hojas', 
-      info: 'Literatura para todas las edades', 
+      info: 'Literatura para todas las edades. Sumérgete en el mundo de la literatura.',
+      Wp: 'WhatsApp: 313457922',
+      PagWeb: 'www.entrehojas.com',  
       descripcion: 'Literatura clásica, juvenil, universal',
       imagen: '/imagenes/logo4.jpeg',
     },
     { id: 1, 
       nombre: 'Joyería Polaris', 
-      info: 'Joyería en acero, plata, Rodio', 
+      info: 'Joyería en acero, plata, Rodio. Brilla con nuestros accesorios.',
+      Wp: 'WhatsApp: 301756223',
+      PagWeb: 'www.joyeriapolaris.com', 
       descripcion: 'Hermosas prendas', 
       imagen: '/imagenes/logo3.jpeg',
     },
     { id: 2, 
       nombre: 'Pink Studio', 
-      info: 'Personalización de camisetas y mugs', 
+      info: 'Personalización de camisetas y mugs. Encuentra el detalle ideal.',
+      Wp: 'WhatsApp: 312457889',
+      PagWeb: 'www.pinkstudio.com',  
       descripcion: 'Detalles personalizados', 
       imagen: '/imagenes/logo2.jpeg',
     },
   ];
-
+/**Contenido de cada uno de los productos para cada tienda */
   const productosLibreria = [
     {
       id: 0, 
@@ -133,22 +140,7 @@ const App = () => {
 
   ];
 
-  const agregarAlCarrito = (producto) => {
-    setCarrito([...carrito, producto]);
-  };
-
-  const vaciarAlCarrito = () => {
-    setCarrito([]);
-  };
-
-  const eliminarDelCarrito = (productoId) => {
-    const index = carrito.findIndex(item => item.id === productoId);
-    if (index !== -1) {
-      const nuevoCarrito = [...carrito];
-      nuevoCarrito.splice(index, 1);
-      setCarrito(nuevoCarrito);
-    }
-  };
+  
 
 
   return (
@@ -158,11 +150,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={
           <TiendaVirtual
-            carrito={carrito}
-            setCarrito={setCarrito}
-            agregarAlCarrito={agregarAlCarrito}
-            eliminarDelCarrito={eliminarDelCarrito}
-            vaciarAlCarrito={vaciarAlCarrito}
+
             tiendas={tiendas}
           />
         } />
@@ -178,7 +166,9 @@ const App = () => {
         } />
         
       </Routes>
+     
     </Router>
+  
   </>
   );
 };

@@ -1,12 +1,19 @@
-import { useParams } from 'react-router-dom';
+/**Este componente contiene la información detallada de cada producto */
+
+import React from "react";
+import { useParams, useNavigate } from 'react-router-dom';
+
 
 const DetalleProducto = ({ productosLibreria }) => {
 
     const { id } = useParams(); 
+    const navigate = useNavigate();
     const productoSeleccionado = productosLibreria.find(producto => producto.id === parseInt(id));
+    navigate('/');
 
     return (
         <div className="product-detail-container">
+            
             <div className="product-image">
                 <img src={productoSeleccionado.imagen} alt={productoSeleccionado.nombre} />
             </div>

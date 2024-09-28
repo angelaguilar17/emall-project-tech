@@ -1,3 +1,5 @@
+/**Este componente contiene la estructura e información de la página para cada tienda */
+
 import { Link } from 'react-router-dom';
 import ProductCard from '../Components/ProductCard'
 import { useParams } from 'react-router-dom';
@@ -29,7 +31,7 @@ const DetalleTienda = ({ productosLibreria, tiendas }) => {
                     className="logo-store"
                 />
                 <h1>{tiendaSeleccionada.nombre}</h1> 
-
+                
                 <p>{tiendaSeleccionada.info}</p> 
 
             </div>
