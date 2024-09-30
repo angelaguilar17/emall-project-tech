@@ -23,7 +23,7 @@ const StoreCard = ({ tienda }) => {
 
         <button
           onClick={() => navigate(`/tienda/${tienda.id}`)}
-          className="button-search" /**Por medio de este enlace se accede a la página de la tienda con sus respectivos productos */
+          className="button-search"
         >
           Visítanos
         </button>

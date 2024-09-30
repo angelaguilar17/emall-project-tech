@@ -6,7 +6,7 @@ import React from 'react';
 import './ProductCard.css';
 import { useNavigate } from 'react-router-dom';
 
-const ProductCard = ({ producto }) => {
+const ProductCard = ({ producto, onAgregarAlCarrito }) => {
   const navigate = useNavigate();
 
   return (
@@ -19,13 +19,19 @@ const ProductCard = ({ producto }) => {
         />
         <h2 className="store-name">{producto.nombre}</h2>
         <p className="store-info">{producto.descripcion}</p>
-        <p className="store-precio">${producto.precio}</p>
+        <p className="producto-precio">${producto.precio}</p>
         <button
           onClick={() => navigate(`/producto/${producto.id}`)}
-          className="button-search" /**Por medio de este enlace se conecta con la información detallada de cada producto */
+          className="button-search"
         >
           Ver producto
         </button>
+        <button
+        onClick={() => onAgregarAlCarrito(producto)}
+        className="boton-agregar"
+      >
+        Agregar al carrito
+      </button>
       </div>
     </div>
     
